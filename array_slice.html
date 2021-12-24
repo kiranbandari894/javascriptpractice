@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Array  :</h1>
+        <h2 style="color:red;" id="test3"></h2>
+        <h1>Before slice() method apply :</h1>
+      <span> <h2  style="color:rgb(12, 247, 12);">Output : </h2> </span><span><h2 style="color:red;" id="test1"></h2></span>
+
+        <h1>After slice() method apply:</h1>
+        <h2 style="color:rgb(12, 247, 12);">Output :  <h2 style="color:red;" id="test2"></h2></h2>
+    <script>
+        
+        var slicearray = ["Kiran","raju","bablu","ram"];
+
+        document.getElementById('test3').innerHTML = "["+slicearray+"]" ;
+        document.getElementById('test1').innerHTML = slicearray.toString() ;
+        // Applying slice method  array.slice(indexstart,indexend) Ex : array.slice(2,5) it will prints only the values from index 2 to 5
+         slicearray.slice(2,slicearray.length);
+         console.log(slicearray);
+        document.getElementById('test2').innerHTML = slicearray.slice(2,slicearray.length).toString() ;
+
+
+    </script>
+    </body>
+</html>
