@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var obj = {
+        set foo(value) {
+            this.bar = value;
+        }
+        };
+
+        // Non-standard and deprecated way
+      var test1 =   obj.__lookupSetter__('foo')
+        // (function(value) { this.bar = value; })
+
+        // Standard-compliant way
+      var test =   Object.getOwnPropertyDescriptor(obj, 'foo').set("test");
+      console.log(test1);
+        // (function(value) { this.bar = value; })
+
+    </script>
+</body>
+</html>
