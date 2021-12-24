@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check console</h1>
+    <script>
+        // Object
+      var obj = {};
+      
+    //   Here this method checks, is it possible to add new items into Object expected answer will be in True or False
+     var obj1 =  Object.isExtensible(obj); 
+     console.log(obj1);
+    // Expected Output is True
+ 
+
+    // Here we are adding name value to Object 
+      obj.name = "Kiran";
+      console.log(obj);
+     //   Here this method ristricts the object to adding the new items
+    Object.preventExtensions(obj);
+
+    //  After preventing object Checking , is it possible to add new items into Object expected answer will be in True or False
+    var obj2 = Object.isExtensible(obj);
+    console.log(obj2);
+    //  Expected Output is False
+    
+    // Here we are adding age value to Object but it will not add to object because we have restricted with 'Object.preventExtensions(obj)' method  
+    obj.age = "Kumar";
+    console.log(obj);
+    </script>
+</body>
+</html>
